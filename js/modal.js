@@ -152,6 +152,33 @@ If you look closely enough.`
         description: `Christmas afternoon.
 
 Quiet and still.`
+    },
+    './images/Objects & Quiet Narratives/20260517114630.jpg': {
+        index: '#017',
+        title: 'Memory Keeper',
+        location: 'Hangzhou',
+        date: 'May 2026',
+        description: `Objects that hold stories.
+
+Each one a small reminder of something that mattered.`
+    },
+    './images/Objects & Quiet Narratives/20260517114637.jpg': {
+        index: '#018',
+        title: 'Collected Moments',
+        location: 'Hangzhou',
+        date: 'May 2026',
+        description: `The things we keep.
+
+They say more about us than we realize.`
+    },
+    './images/Objects & Quiet Narratives/20260517114641.jpg': {
+        index: '#019',
+        title: 'Still Life',
+        location: 'Hangzhou',
+        date: 'May 2026',
+        description: `Quiet narratives in everyday objects.
+
+I photograph them to remember.`
     }
 };
 
