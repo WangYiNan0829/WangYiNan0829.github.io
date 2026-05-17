@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./css/style.css">
     
@@ -43,8 +43,6 @@
 
     <main class="main-content">
         <section class="portfolio-section">
-            <h2 class="section-title" data-aos="fade-down">Selected Works</h2>
-            
             <div class="project-series">
                 <div class="series-header" data-aos="fade-up">
                     <h3>Everyday Spaces</h3>
@@ -100,18 +98,6 @@
             </div>
 
             <div class="project-series">
-                <div class="featured-story" data-aos="fade-up" data-aos-delay="200">
-                    <div class="story-image">
-                        <img src="./images/Light, Travel & Memory/2025-10-08 133506.jpg" alt="Hong Kong - A moment with my father">
-                    </div>
-                    <div class="story-text">
-                        <h4>Hong Kong, 2025</h4>
-                        <p>The photo of a visit to Hong Kong is quite meaningful to me, and I still remember it very well. It was the first time I went out with my father in other places since I grew up. At that time, he had a holiday on the National Day, and he finally had time for the holiday. This photo was taken when I was traveling. At that time, I waited for a long time to take this photo, because there were a lot of people queuing up at that time. Although my father doesn't understand, he still stays with me. In my impression, the role of father is actually not very present. He often said that he sent me to school when he was a child, but I can't remember it now. Then, as I grew older, my relationship with my father became awkward and often quarreled. So this photo is also a memorial to the relaxation of my relationship with my father, so this photo is very meaningful to me.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-series">
                 <div class="series-header" data-aos="fade-up">
                     <h3>Objects and Small Stories</h3>
                     <p class="series-description">From novel merchandise in middle school to café details today, I've always been drawn to objects that carry memory and emotion. These small things tell quiet stories about what we love and how we remember.</p>
@@ -129,6 +115,22 @@
                 </div>
             </div>
         </section>
+
+        <section class="featured-project-section">
+            <div class="featured-project-spacer"></div>
+            <div class="featured-project" data-aos="fade-up" data-aos-delay="200">
+                <div class="featured-project-image gallery-item">
+                    <img src="./images/Light, Travel & Memory/2025-10-08 133506.jpg" alt="City Notes: Hong Kong">
+                </div>
+                <div class="featured-project-text">
+                    <h3>City Notes: Hong Kong</h3>
+                    <p class="featured-project-meta">October 2025</p>
+                    <p>The first time traveling with my father since I grew up.</p>
+                    <p>He waited with me while I took this shot. There were so many people. He didn't understand why I wanted this photo. But he stayed.</p>
+                    <p>Our relationship has always been complicated. This trip was different. This photo reminds me of that.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
@@ -140,7 +142,26 @@
         </div>
     </footer>
 
+    <div class="editorial-modal" id="editorialModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-image-section">
+                <img src="" alt="" class="modal-image">
+            </div>
+            <div class="modal-text-section">
+                <button class="modal-close" aria-label="Close modal">×</button>
+                <div class="modal-content">
+                    <div class="modal-index"></div>
+                    <h3 class="modal-title"></h3>
+                    <div class="modal-meta"></div>
+                    <p class="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>
         AOS.init();
