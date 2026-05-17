@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Oliver Williams</title>
+    <meta name="description" content="Photographer's portfolio. Wedding, portrait, and reportage photography.">
+    
+    <link rel="icon" href="./favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./favicon/favicon-apple-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="./index.html">
+                <h1>Oliver Williams</h1>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <section class="portfolio-section">
+            <h2 class="section-title" data-aos="fade-down">Portfolio</h2>
+            <div class="gallery-grid">
+                <a href="#" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./images/Portrait.png" alt="Description of photo 1">
+                    <div class="overlay">
+                        <span>Portrait</span>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./images/Wedding.png" alt="Description of photo 2">
+                    <div class="overlay">
+                        <span>Wedding</span>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./images/Scenery.png" alt="Description of photo 3">
+                    <div class="overlay">
+                        <span>Scenery</span>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="./images/Reportage.png" alt="Description of photo 4">
+                    <div class="overlay">
+                        <span>Reportage</span>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="./images/Studio.png" alt="Description of photo 5">
+                    <div class="overlay">
+                        <span>Studio</span>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                    <img src="./images/Architecture.png" alt="Description of photo 6">
+                    <div class="overlay">
+                        <span>Architecture</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026. All rights reserved. <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
