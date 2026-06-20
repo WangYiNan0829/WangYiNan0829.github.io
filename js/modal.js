@@ -1,114 +1,63 @@
 const imageMetadata = {
     './images/Everyday Spaces/2025-10-07 230614.jpg': {
         index: '#001',
-        title: 'Late Afternoon',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `I stayed here longer than I planned.
-
-The sunlight kept moving across the table.
-Nobody talked much.`
+        title: 'Glass room café',
+        description: `Light pours in through the big glass window.`
     },
     './images/Everyday Spaces/2025-10-07 230702.jpg': {
         index: '#002',
-        title: 'Corner Seat',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `This is where I go when I need to think.
-
-The coffee gets cold.
-I don't mind.`
+        title: 'Leisure in the courtyard fountain',
+        description: `A slow afternoon by the fountain.`
     },
     './images/Everyday Spaces/2025-10-07 230908.jpg': {
         index: '#003',
-        title: 'Empty Tables',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `Between lunch and dinner.
-The quiet hour.
-
-This is when the space feels most honest.`
+        title: 'The moment of being alone by the river',
+        description: `One drink, soft light, happy alone.`
     },
     './images/Everyday Spaces/2025-10-07 231235.jpg': {
         index: '#004',
-        title: 'Window Light',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `The way light falls through old windows.
-
-I come back for this.`
+        title: 'Half a day in the street cafe',
+        description: `Half a day slips by at the corner café.`
     },
     './images/Everyday Spaces/2025-10-07 234458.jpg': {
         index: '#005',
-        title: 'Street Corner',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `Familiar streets at unfamiliar hours.
-
-Everything looks different in the evening.`
+        title: 'The countryside in the window',
+        description: `A quiet, faraway view past the window frame.`
     },
     './images/Everyday Spaces/2025-10-07 234712.jpg': {
         index: '#006',
-        title: 'Quiet Moment',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `Small spaces where time moves differently.
-
-I notice things I usually miss.`
+        title: 'Green shade and white umbrella outside the window',
+        description: `Green trees and white umbrellas frame the summer.`
     },
     './images/Light, Travel & Memory/2025-10-07 230949.jpg': {
         index: '#007',
-        title: 'Golden Hour',
-        location: 'Travel',
-        date: 'October 2025',
-        description: `Chasing light across unfamiliar cities.
-
-This is what I came for.`
+        title: 'Reading books and watching the river view',
+        description: `Reading a book while the river flows by.`
     },
     './images/Light, Travel & Memory/2025-10-07 233236.jpg': {
         index: '#008',
-        title: 'Distant View',
-        location: 'Travel',
-        date: 'October 2025',
-        description: `Sometimes you have to go far away
-to see things clearly.`
+        title: 'Couple watching sunset by sea',
+        description: `Two people, one sunset by the sea.`
     },
     './images/Light, Travel & Memory/2025-10-07 233714.jpg': {
         index: '#009',
-        title: 'Sunset',
-        location: 'Travel',
-        date: 'October 2025',
-        description: `I planned this shot for weeks.
-Researched the timing, the angle.
-
-It was worth it.`
+        title: 'Clouds and fog overflow the river.',
+        description: `Soft clouds and fog drift over the water.`
     },
     './images/Light, Travel & Memory/2025-10-07 235628.jpg': {
         index: '#010',
-        title: 'Evening Sky',
-        location: 'Travel',
-        date: 'October 2025',
-        description: `The light changes everything.
-
-Same place, different feeling.`
+        title: 'Victoria Port Day Cruise',
+        description: `A daytime ride across the harbor.`
     },
     './images/Light, Travel & Memory/2025-10-08 000100.jpg': {
         index: '#011',
-        title: 'Night Falls',
-        location: 'Travel',
-        date: 'October 2025',
-        description: `The moment between day and night.
-
-Everything feels suspended.`
+        title: 'Dusk and twilight on the sea',
+        description: `The sky slowly fades over the sea.`
     },
     './images/Light, Travel & Memory/2026-02-24 174744.jpg': {
         index: '#012',
-        title: 'Winter Light',
-        location: 'Travel',
-        date: 'February 2026',
-        description: `Cold air, warm light.
-
-This is what winter looks like to me.`
+        title: 'The sunset between the balcony windows',
+        description: `The sunset waits between the balcony windows.`
     },
     './images/Light, Travel & Memory/2025-10-08 133506.jpg': {
         index: '#013',
@@ -128,57 +77,38 @@ This photo reminds me of that.`
     },
     './images/Objects & Quiet Narratives/2025-10-07 232356.jpg': {
         index: '#014',
-        title: 'Small Things',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `Objects that carry memory.
-
-I've always been drawn to these quiet details.`
+        title: 'Desserts and small dolls',
+        description: `Sweets and little dolls, a small happy moment.`
     },
     './images/Objects & Quiet Narratives/2025-10-07 234318.jpg': {
         index: '#015',
-        title: 'Café Details',
-        location: 'Hangzhou',
-        date: 'October 2025',
-        description: `The small stories spaces tell.
-
-If you look closely enough.`
+        title: 'Quiet coffee shop',
+        description: `A quiet café where time slows down.`
+    },
+    './images/Objects & Quiet Narratives/2025-10-07 234351.jpg': {
+        index: '#016',
+        title: 'Afternoon tea in the busy',
+        description: `A little tea break from a busy day.`
     },
     './images/Objects & Quiet Narratives/2025-12-25 154300.jpg': {
-        index: '#016',
-        title: 'Winter Day',
-        location: 'Hangzhou',
-        date: 'December 2025',
-        description: `Christmas afternoon.
-
-Quiet and still.`
+        index: '#017',
+        title: 'The table is full of cute dolls',
+        description: `A whole table of soft, cute dolls.`
     },
     './images/Objects & Quiet Narratives/20260517114630.jpg': {
-        index: '#017',
-        title: 'Memory Keeper',
-        location: 'Hangzhou',
-        date: 'May 2026',
-        description: `Objects that hold stories.
-
-Each one a small reminder of something that mattered.`
+        index: '#018',
+        title: 'Small table by the autumn skylight',
+        description: `A small table under the autumn light.`
     },
     './images/Objects & Quiet Narratives/20260517114637.jpg': {
-        index: '#018',
-        title: 'Collected Moments',
-        location: 'Hangzhou',
-        date: 'May 2026',
-        description: `The things we keep.
-
-They say more about us than we realize.`
+        index: '#019',
+        title: 'Coffee and double cake',
+        description: `One coffee, one layered cake, just right.`
     },
     './images/Objects & Quiet Narratives/20260517114641.jpg': {
-        index: '#019',
+        index: '#020',
         title: 'Still Life',
-        location: 'Hangzhou',
-        date: 'May 2026',
-        description: `Quiet narratives in everyday objects.
-
-I photograph them to remember.`
+        description: `Quiet narratives in everyday objects.`
     }
 };
 
@@ -221,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalImage.alt = metadata.title;
             modalIndex.textContent = metadata.index;
             modalTitle.textContent = metadata.title;
-            modalMeta.textContent = `${metadata.location} · ${metadata.date}`;
+            modalMeta.textContent = '';
             modalDescription.textContent = metadata.description;
 
             html.classList.add('no-scroll');
