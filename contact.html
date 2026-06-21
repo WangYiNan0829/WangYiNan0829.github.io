@@ -53,20 +53,28 @@
                 </div>
 
                 <div class="contact-form-container" data-aos="fade-left" data-aos-delay="200">
-                    <form id="contact-form" action="submit_form.php" method="POST">
+                    <div data-fs-success class="success-message" style="display: none; color: #4CAF50; margin-bottom: 20px;">
+                        <p>Thank you! Your message has been sent successfully.</p>
+                    </div>
+                    <div data-fs-error class="error-message" style="display: none; color: #f44336; margin-bottom: 20px;"></div>
+                    
+                    <form id="my-form">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" data-fs-field required>
+                            <span data-fs-error="name" style="color: #f44336; font-size: 0.9em;"></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" data-fs-field required>
+                            <span data-fs-error="email" style="color: #f44336; font-size: 0.9em;"></span>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" data-fs-field required></textarea>
+                            <span data-fs-error="message" style="color: #f44336; font-size: 0.9em;"></span>
                         </div>
-                        <button type="submit" class="btn" data-aos="zoom-in" data-aos-delay="600">
+                        <button type="submit" class="btn" data-fs-submit-btn data-aos="zoom-in" data-aos-delay="600">
                             <span class="btn-text">Send</span>
                             <div class="loader-ring"></div>
                         </button>
@@ -91,15 +99,11 @@
         AOS.init();
     </script>
 
-    <div id="success-toast" class="toast success-toast hidden">
-        <i class="fas fa-check-circle"></i>
-        <p>Message sent successfully!</p>
-    </div>
-
-    <div id="error-toast" class="toast error-toast hidden">
-        <i class="fas fa-times-circle"></i>
-        <p>An error occurred, please try again.</p>
-    </div>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#my-form', formId: 'mqevzqjl' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
