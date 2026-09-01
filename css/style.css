@@ -278,6 +278,114 @@ a:hover {
 
 
                     /*
+                        --- Homepage: Featured Stories ---
+                    */
+
+
+
+.home-stories {
+    padding: 120px 40px 130px;
+    background: #0d0d0d;
+}
+
+.home-stories-header {
+    max-width: 720px;
+    margin: 0 auto 68px;
+    text-align: center;
+}
+
+.home-stories-kicker,
+.home-story-meta {
+    color: #8f8f8f;
+    font-size: 0.76em;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.home-stories-kicker {
+    margin-bottom: 18px;
+}
+
+.home-stories-header h2 {
+    margin-bottom: 22px;
+    color: #e8e8e8;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.3em, 4.5vw, 4.2em);
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 1.15;
+}
+
+.home-stories-header > p:last-child {
+    color: #bdbdbd;
+    font-size: 1.03em;
+    line-height: 1.9;
+}
+
+.home-story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.home-story-card {
+    min-width: 0;
+}
+
+.home-story-image {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 28px;
+    background: #161616;
+}
+
+.home-story-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.home-story-image:hover img,
+.home-story-image:focus-visible img {
+    transform: scale(1.025);
+    filter: brightness(1.08);
+}
+
+.home-story-meta {
+    margin-bottom: 12px;
+}
+
+.home-story-card h3 {
+    margin-bottom: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.home-story-card h3 a {
+    color: #e8e8e8;
+}
+
+.home-story-card > p:not(.home-story-meta) {
+    color: #bcbcbc;
+    font-size: 0.95em;
+    line-height: 1.85;
+}
+
+.home-story-card .project-text-link {
+    margin-top: 24px;
+}
+
+
+
+                    /*
                         --- Buttons ---
                     */
 
@@ -1107,6 +1215,29 @@ a:hover {
     .featured-story {
         flex-direction: column;
         padding: 30px 20px;
+    }
+
+    .home-stories {
+        padding: 88px 20px 96px;
+    }
+
+    .home-stories-header {
+        margin-bottom: 48px;
+        text-align: left;
+    }
+
+    .home-stories-header h2 {
+        font-size: 2.35em;
+        letter-spacing: 2px;
+    }
+
+    .home-story-grid {
+        grid-template-columns: 1fr;
+        gap: 68px;
+    }
+
+    .home-story-image {
+        margin-bottom: 22px;
     }
 
     .statement-text {
@@ -2179,7 +2310,7 @@ a:hover {
     position: absolute;
     top: 30px;
     right: 40px;
-    font-size: 3.5em;
+    font-size: 2.2em;
     color: #e6e6e6;
     cursor: pointer;
     background: none;
@@ -2190,6 +2321,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3;
     transition: color 0.3s ease, transform 0.3s ease;
     font-weight: 300;
     opacity: 0;
@@ -2198,6 +2330,10 @@ a:hover {
                 transform 0.28s ease 0.08s,
                 color 0.3s ease;
     line-height: 1;
+}
+
+.modal-close i {
+    pointer-events: none;
 }
 
 .editorial-modal.active .modal-close {
@@ -2219,12 +2355,29 @@ a:hover {
     font-size: 0.75em;
     letter-spacing: 2px;
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: 4px;
     font-weight: 300;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.35s ease 0.08s,
                 transform 0.35s ease 0.08s;
+}
+
+.modal-counter {
+    margin-bottom: 28px;
+    color: #969696;
+    font-size: 0.72em;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.35s ease 0.11s,
+                transform 0.35s ease 0.11s;
+}
+
+.editorial-modal.active .modal-counter {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .editorial-modal.active .modal-index {
@@ -2286,6 +2439,43 @@ a:hover {
     transform: translateY(0);
 }
 
+.modal-navigation {
+    display: flex;
+    gap: 12px;
+    margin-top: 38px;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.35s ease 0.23s,
+                transform 0.35s ease 0.23s;
+}
+
+.editorial-modal.active .modal-navigation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-nav {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #555;
+    border-radius: 0;
+    background: transparent;
+    color: #d8d8d8;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.modal-nav:hover,
+.modal-nav:focus-visible {
+    border-color: #d8d8d8;
+    background: #e6e6e6;
+    color: #0d0d0d;
+}
+
 .gallery-item {
     cursor: pointer;
 }
@@ -2319,8 +2509,8 @@ a:hover {
     }
 
     .modal-close {
-        top: 30px;
-        right: 40px;
+        top: 22px;
+        right: 24px;
     }
 }
 
@@ -2336,9 +2526,12 @@ a:hover {
     }
 
     .modal-close {
-        top: 20px;
-        right: 30px;
-        font-size: 0.8em;
+        top: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 1.7em;
+        background: rgba(13, 13, 13, 0.72);
     }
 
     .modal-title {
@@ -2348,5 +2541,18 @@ a:hover {
 
     .modal-description {
         font-size: 0.95em;
+    }
+
+    .modal-counter {
+        margin-bottom: 18px;
+    }
+
+    .modal-navigation {
+        margin-top: 24px;
+    }
+
+    .modal-nav {
+        width: 44px;
+        height: 44px;
     }
 }
