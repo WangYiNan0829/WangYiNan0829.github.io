@@ -16,32 +16,118 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Opening/closing menu
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+    const navLinks = Array.from(nav.querySelectorAll('a'));
 
-        if (nav.classList.contains('active')) {
-            html.classList.add('no-scroll');
-            body.classList.add('no-scroll');
-        } else {
-            html.classList.remove('no-scroll');
-            body.classList.remove('no-scroll');
+    const setMenuState = (isOpen, restoreFocus = false) => {
+        nav.classList.toggle('active', isOpen);
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        html.classList.toggle('no-scroll', isOpen);
+        body.classList.toggle('no-scroll', isOpen);
+
+        if (isOpen) {
+            window.requestAnimationFrame(() => navLinks[0]?.focus());
+        } else if (restoreFocus) {
+            menuToggle.focus();
         }
+    };
+
+    menuToggle.addEventListener('click', () => {
+        setMenuState(!nav.classList.contains('active'));
     });
 
     // Close menu when clicking on item
-    nav.querySelectorAll('a').forEach(link => {
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            menuToggle.classList.remove('active');
-            html.classList.remove('no-scroll');
-            body.classList.remove('no-scroll');
+            setMenuState(false);
         });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (!nav.classList.contains('active')) return;
+
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            setMenuState(false, true);
+            return;
+        }
+
+        if (event.key === 'Tab' && navLinks.length) {
+            const firstLink = navLinks[0];
+            const lastLink = navLinks[navLinks.length - 1];
+
+            if (event.shiftKey && document.activeElement === menuToggle) {
+                event.preventDefault();
+                lastLink.focus();
+            } else if (event.shiftKey && document.activeElement === firstLink) {
+                event.preventDefault();
+                menuToggle.focus();
+            } else if (!event.shiftKey && document.activeElement === menuToggle) {
+                event.preventDefault();
+                firstLink.focus();
+            } else if (!event.shiftKey && document.activeElement === lastLink) {
+                event.preventDefault();
+                menuToggle.focus();
+            }
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && nav.classList.contains('active')) {
+            setMenuState(false);
+        }
     });
 
     // Listen for scroll event
     window.addEventListener('scroll', handleScroll);
+
+    // --- Documentary reading progress ---
+
+    const documentaryProgress = document.querySelector('.documentary-reading-progress span');
+    const chapterLinks = Array.from(document.querySelectorAll('.documentary-chapter-nav a'));
+
+    if (documentaryProgress && chapterLinks.length) {
+        const chapterSections = chapterLinks.map(link => document.querySelector(link.getAttribute('href')));
+        let progressTicking = false;
+
+        const updateDocumentaryProgress = () => {
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+            documentaryProgress.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+            body.classList.toggle('documentary-story-started', window.scrollY >= window.innerHeight * 0.6);
+
+            let activeChapter = 0;
+            chapterSections.forEach((section, index) => {
+                if (section && section.getBoundingClientRect().top <= window.innerHeight * 0.45) {
+                    activeChapter = index;
+                }
+            });
+
+            chapterLinks.forEach((link, index) => {
+                const isActive = index === activeChapter;
+                link.classList.toggle('active', isActive);
+                if (isActive) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+
+            progressTicking = false;
+        };
+
+        const requestProgressUpdate = () => {
+            if (!progressTicking) {
+                window.requestAnimationFrame(updateDocumentaryProgress);
+                progressTicking = true;
+            }
+        };
+
+        window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+        window.addEventListener('resize', requestProgressUpdate);
+        updateDocumentaryProgress();
+    }
 
     // --- Form Submission and Notification Logic ---
 

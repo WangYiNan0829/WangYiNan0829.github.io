@@ -19,58 +19,61 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="main-header">
         <div class="logo">
             <a href="./index.html">
-                <h1>Valery Wang</h1>
+                <span class="site-name">Valery Wang</span>
             </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-navigation" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="works.html" class="active">Selected Works</a></li>
+                <li><a href="works.html" class="active" aria-current="page">Selected Works</a></li>
+                <li><a href="documentary.html">Documentary</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="statement.html">Artist Statement</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Open menu" aria-controls="main-navigation" aria-expanded="false">
             <span class="hamburger"></span>
         </button>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
+        <h1 class="visually-hidden">Selected Works</h1>
         <section class="portfolio-section">
             <div class="project-series">
                 <div class="series-header" data-aos="fade-up">
-                    <h3>Everyday Spaces</h3>
+                    <h2>Everyday Spaces</h2>
                     <p class="series-description">Cafés, streets, and small corners where I slow down and observe. These places are not just locations—they are where I reconnect with myself and rediscover the beauty in ordinary moments.</p>
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./images/Everyday Spaces/2025-10-07 230614.jpg" alt="Everyday Spaces">
+                        <img src="./images/Everyday Spaces/2025-10-07 230614-optimized.jpg" alt="Everyday Spaces" decoding="async">
                         <div class="gallery-title">glass room café</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                        <img src="./images/Everyday Spaces/2025-10-07 230702.jpg" alt="Everyday Spaces">
+                        <img src="./images/Everyday Spaces/2025-10-07 230702-optimized.jpg" alt="Everyday Spaces" decoding="async">
                         <div class="gallery-title">Leisure in the courtyard fountain</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-                        <img src="./images/Everyday Spaces/2025-10-07 230908.jpg" alt="Everyday Spaces">
+                        <img src="./images/Everyday Spaces/2025-10-07 230908-optimized.jpg" alt="Everyday Spaces" decoding="async">
                         <div class="gallery-title">The moment of being alone by the river</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
-                        <img src="./images/Everyday Spaces/2025-10-07 231235.jpg" alt="Everyday Spaces">
+                        <img src="./images/Everyday Spaces/2025-10-07 231235-optimized.jpg" alt="Everyday Spaces" decoding="async">
                         <div class="gallery-title">Half a day in the street cafe</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
-                        <img src="./images/Everyday Spaces/2025-10-07 234458.jpg" alt="Everyday Spaces">
+                        <img src="./images/Everyday Spaces/2025-10-07 234458.jpg" alt="Everyday Spaces" loading="lazy" decoding="async">
                         <div class="gallery-title">The countryside in the window</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-                        <img src="./images/Everyday Spaces/2025-10-07 234712.jpg" alt="Everyday Spaces">
+                        <img src="./images/Everyday Spaces/2025-10-07 234712.jpg" alt="Everyday Spaces" loading="lazy" decoding="async">
                         <div class="gallery-title">Green shade and white umbrella outside the window</div>
                     </div>
                 </div>
@@ -78,32 +81,32 @@
 
             <div class="project-series">
                 <div class="series-header" data-aos="fade-up">
-                    <h3>Light and Distance</h3>
+                    <h2>Light and Distance</h2>
                     <p class="series-description">Travel, sunsets, and the way light transforms familiar places into something new. I plan each shot carefully—researching locations, timing the light, and thinking about how space and emotion connect.</p>
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./images/Light, Travel & Memory/2025-10-07 230949.jpg" alt="Light and Distance">
+                        <img src="./images/Light, Travel & Memory/2025-10-07 230949.jpg" alt="Light and Distance" loading="lazy" decoding="async">
                         <div class="gallery-title">Reading books and watching the river view</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                        <img src="./images/Light, Travel & Memory/2025-10-07 233236.jpg" alt="Light and Distance">
+                        <img src="./images/Light, Travel & Memory/2025-10-07 233236.jpg" alt="Light and Distance" loading="lazy" decoding="async">
                         <div class="gallery-title">Couple watching sunset by sea</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-                        <img src="./images/Light, Travel & Memory/2025-10-07 233714.jpg" alt="Light and Distance">
+                        <img src="./images/Light, Travel & Memory/2025-10-07 233714.jpg" alt="Light and Distance" loading="lazy" decoding="async">
                         <div class="gallery-title">Clouds and fog overflow the river.</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
-                        <img src="./images/Light, Travel & Memory/2025-10-07 235628.jpg" alt="Light and Distance">
+                        <img src="./images/Light, Travel & Memory/2025-10-07 235628.jpg" alt="Light and Distance" loading="lazy" decoding="async">
                         <div class="gallery-title">Victoria Port Day Cruise</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
-                        <img src="./images/Light, Travel & Memory/2025-10-08 000100.jpg" alt="Light and Distance">
+                        <img src="./images/Light, Travel & Memory/2025-10-08 000100.jpg" alt="Light and Distance" loading="lazy" decoding="async">
                         <div class="gallery-title">Dusk and twilight on the sea</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-                        <img src="./images/Light, Travel & Memory/2026-02-24 174744.jpg" alt="Light and Distance">
+                        <img src="./images/Light, Travel & Memory/2026-02-24 174744.jpg" alt="Light and Distance" loading="lazy" decoding="async">
                         <div class="gallery-title">The sunset between the balcony windows</div>
                     </div>
                 </div>
@@ -111,32 +114,32 @@
 
             <div class="project-series">
                 <div class="series-header" data-aos="fade-up">
-                    <h3>Objects and Small Stories</h3>
+                    <h2>Objects and Small Stories</h2>
                     <p class="series-description">From novel merchandise in middle school to café details today, I've always been drawn to objects that carry memory and emotion. These small things tell quiet stories about what we love and how we remember.</p>
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./images/Objects & Quiet Narratives/2025-10-07 232356.jpg" alt="Objects and Small Stories">
+                        <img src="./images/Objects & Quiet Narratives/2025-10-07 232356.jpg" alt="Objects and Small Stories" loading="lazy" decoding="async">
                         <div class="gallery-title">Desserts and small dolls</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                        <img src="./images/Objects & Quiet Narratives/2025-10-07 234318.jpg" alt="Objects and Small Stories">
+                        <img src="./images/Objects & Quiet Narratives/2025-10-07 234318.jpg" alt="Objects and Small Stories" loading="lazy" decoding="async">
                         <div class="gallery-title">Quiet coffee shop</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-                        <img src="./images/Objects & Quiet Narratives/2025-10-07 234351.jpg" alt="Objects and Small Stories">
+                        <img src="./images/Objects & Quiet Narratives/2025-10-07 234351.jpg" alt="Objects and Small Stories" loading="lazy" decoding="async">
                         <div class="gallery-title">Afternoon tea in the busy</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
-                        <img src="./images/Objects & Quiet Narratives/2025-12-25 154300.jpg" alt="Objects and Small Stories">
+                        <img src="./images/Objects & Quiet Narratives/2025-12-25 154300.jpg" alt="Objects and Small Stories" loading="lazy" decoding="async">
                         <div class="gallery-title">The table is full of cute dolls</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
-                        <img src="./images/Objects & Quiet Narratives/20260517114630.jpg" alt="Objects and Small Stories">
+                        <img src="./images/Objects & Quiet Narratives/20260517114630.jpg" alt="Objects and Small Stories" loading="lazy" decoding="async">
                         <div class="gallery-title">Small table by the autumn skylight</div>
                     </div>
                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-                        <img src="./images/Objects & Quiet Narratives/20260517114637.jpg" alt="Objects and Small Stories">
+                        <img src="./images/Objects & Quiet Narratives/20260517114637.jpg" alt="Objects and Small Stories" loading="lazy" decoding="async">
                         <div class="gallery-title">Coffee and double cake</div>
                     </div>
                 </div>
@@ -145,12 +148,24 @@
 
         <section class="featured-project-section">
             <div class="featured-project-spacer"></div>
+            <div class="featured-project featured-documentary-project" data-aos="fade-up">
+                <a class="featured-project-image gallery-item" href="documentary.html">
+                    <img src="./images/nav/2.jpg" alt="People Behind the Shoes documentary project" loading="lazy" decoding="async">
+                </a>
+                <div class="featured-project-text">
+                    <p class="featured-project-meta">DOCUMENTARY PHOTOGRAPHY · AUGUST 2026</p>
+                    <h2><a href="documentary.html">People Behind the Shoes</a></h2>
+                    <p>Six days inside a shoe factory, following the labor and lives behind the production line.</p>
+                    <a class="project-text-link" href="documentary.html">View the story <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <div class="featured-project-divider"></div>
             <div class="featured-project" data-aos="fade-up" data-aos-delay="200">
                 <div class="featured-project-image gallery-item">
-                    <img src="./images/Light, Travel & Memory/2025-10-08 133506.jpg" alt="City Notes: Hong Kong">
+                    <img src="./images/Light, Travel & Memory/2025-10-08 133506.jpg" alt="City Notes: Hong Kong" loading="lazy" decoding="async">
                 </div>
                 <div class="featured-project-text">
-                    <h3>City Notes: Hong Kong</h3>
+                    <h2>City Notes: Hong Kong</h2>
                     <p class="featured-project-meta">October 2025</p>
                     <p>The first time traveling with my father since I grew up.</p>
                     <p>He waited with me while I took this shot. There were so many people. He didn't understand why I wanted this photo. But he stayed.</p>
@@ -163,13 +178,12 @@
     <footer class="main-footer">
         <p>&copy; 2026. All rights reserved.</p>
         <div class="social-links">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/viennawyn0829/" aria-label="Valery Wang on Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:viennawyn19@icloud.com" aria-label="Email Valery Wang"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 
-    <div class="editorial-modal" id="editorialModal">
+    <div class="editorial-modal" id="editorialModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-container">
             <div class="modal-image-section">
@@ -179,9 +193,9 @@
                 <button class="modal-close" aria-label="Close modal">×</button>
                 <div class="modal-content">
                     <div class="modal-index"></div>
-                    <h3 class="modal-title"></h3>
+                    <h2 class="modal-title" id="modalTitle"></h2>
                     <div class="modal-meta"></div>
-                    <p class="modal-description"></p>
+                    <p class="modal-description" id="modalDescription"></p>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Valery Wang</title>
     <meta name="description" content="Get in touch via email or social media.">
     
     <link rel="icon" href="./favicon/favicon-32x32.png" sizes="32x32">
@@ -18,45 +19,49 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="main-header">
         <div class="logo">
             <a href="./index.html">
-                <h1>Valery Wang</h1>
+                <span class="site-name">Valery Wang</span>
             </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-navigation" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="works.html">Selected Works</a></li>
+                <li><a href="documentary.html">Documentary</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="statement.html">Artist Statement</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Open menu" aria-controls="main-navigation" aria-expanded="false">
             <span class="hamburger"></span>
         </button>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
         <section class="contact-section">
             <div class="contact-container">
                 <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
-                    <h3>Connect</h3>
+                    <p class="contact-kicker">CONTACT</p>
+                    <h1>Connect</h1>
                     <p data-aos="fade-right" data-aos-delay="400">Feel free to reach out if you'd like to connect or learn more about my work.</p>
+                    <p class="contact-response-time">I usually reply within two to three days.</p>
                     <ul data-aos="fade-right" data-aos-delay="600">
                         <li><i class="fas fa-envelope"></i> <a href="mailto:viennawyn19@icloud.com">viennawyn19@icloud.com</a></li>
-                        <li><i class="fab fa-instagram"></i> <a href="#">@viennawyn0829</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/viennawyn0829/" target="_blank" rel="noopener noreferrer">@viennawyn0829</a></li>
                     </ul>
                 </div>
 
                 <div class="contact-form-container" data-aos="fade-left" data-aos-delay="200">
-                    <div data-fs-success class="success-message" style="display: none; color: #4CAF50; margin-bottom: 20px;">
+                    <div data-fs-success class="success-message" role="status" aria-live="polite" style="display: none; color: #4CAF50; margin-bottom: 20px;">
                         <p>Thank you! Your message has been sent successfully.</p>
                     </div>
-                    <div data-fs-error class="error-message" style="display: none; color: #f44336; margin-bottom: 20px;"></div>
+                    <div data-fs-error class="error-message" role="alert" aria-live="assertive" style="display: none; color: #f44336; margin-bottom: 20px;"></div>
                     
                     <form id="my-form">
                         <div class="form-group">
@@ -75,7 +80,7 @@
                             <span data-fs-error="message" style="color: #f44336; font-size: 0.9em;"></span>
                         </div>
                         <button type="submit" class="btn" data-fs-submit-btn data-aos="zoom-in" data-aos-delay="600">
-                            <span class="btn-text">Send</span>
+                            <span class="btn-text">Send message</span>
                             <div class="loader-ring"></div>
                         </button>
                     </form>
@@ -87,9 +92,8 @@
     <footer class="main-footer">
         <p>&copy; 2026. All rights reserved.</p>
         <div class="social-links">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/viennawyn0829/" aria-label="Valery Wang on Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:viennawyn19@icloud.com" aria-label="Email Valery Wang"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 

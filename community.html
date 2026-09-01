@@ -19,33 +19,35 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="main-header">
         <div class="logo">
             <a href="./index.html">
-                <h1>Valery Wang</h1>
+                <span class="site-name">Valery Wang</span>
             </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-navigation" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="works.html">Selected Works</a></li>
-                <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="documentary.html">Documentary</a></li>
+                <li><a href="community.html" class="active" aria-current="page">Community</a></li>
                 <li><a href="statement.html">Artist Statement</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Open menu" aria-controls="main-navigation" aria-expanded="false">
             <span class="hamburger"></span>
         </button>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
         <section class="community-section">
             <div class="page-header">
-                <h2 class="page-main-title">Valery Wang</h2>
-                <p class="page-subtitle">Community Through Photography</p>
+                <h1 class="page-main-title">Community Through Photography</h1>
+                <p class="page-subtitle">Connection, contribution, and memory</p>
             </div>
             
             <div class="community-intro">
@@ -55,11 +57,11 @@
             <div class="community-container">
                 <div class="community-block">
                     <div class="community-gallery-carousel">
-                        <img src="./images/community/Photography3.jpg" alt="Photography club exhibition" class="carousel-img active">
-                        <img src="./images/community/Photography2.jpg" alt="Photography club group photo" class="carousel-img">
+                        <img src="./images/community/Photography3-optimized.jpg" alt="Photography club exhibition" class="carousel-img active" loading="lazy" decoding="async">
+                        <img src="./images/community/Photography2.jpg" alt="Photography club group photo" class="carousel-img" loading="lazy" decoding="async">
                     </div>
                     <div class="community-text-content">
-                        <h3>Photography Club President</h3>
+                        <h2>Photography Club President</h2>
                         <p>As club president, I run weekly sessions where we explore techniques, share ideas, and collaborate on short films and campus photoshoots—building a community that sees photography as both art and storytelling.</p>
                         <p>Leading the club taught me how to bring people together and make space for creative exploration.</p>
                     </div>
@@ -67,11 +69,11 @@
 
                 <div class="community-block">
                     <div class="community-gallery-carousel">
-                        <img src="./images/community/Photography4.jpg" alt="Exhibition display" class="carousel-img active">
-                        <img src="./images/community/Photography1.jpg" alt="Event activity documentation" class="carousel-img">
+                        <img src="./images/community/Photography4.jpg" alt="Exhibition display" class="carousel-img active" loading="lazy" decoding="async">
+                        <img src="./images/community/Photography1.jpg" alt="Event activity documentation" class="carousel-img" loading="lazy" decoding="async">
                     </div>
                     <div class="community-text-content">
-                        <h3>Event Photography</h3>
+                        <h2>Event Photography</h2>
                         <p>I document other clubs' activities—like the badminton club's competitions, capturing the intensity and joy of the matches. These photos became part of their archive and helped them share their achievements across the school.</p>
                         <p>It showed me photography can serve others—not just as a record, but as a way to honor people's efforts.</p>
                     </div>
@@ -79,11 +81,11 @@
 
                 <div class="community-block">
                     <div class="community-gallery-carousel">
-                        <img src="./images/community/Charity1.jpg" alt="Instant photo station" class="carousel-img active">
-                        <img src="./images/community/Photography5.jpg" alt="Student portrait moment" class="carousel-img">
+                        <img src="./images/community/Charity1.jpg" alt="Instant photo station" class="carousel-img active" loading="lazy" decoding="async">
+                        <img src="./images/community/Photography5.jpg" alt="Student portrait moment" class="carousel-img" loading="lazy" decoding="async">
                     </div>
                     <div class="community-text-content">
-                        <h3>Charity Sale & Instant Portraits</h3>
+                        <h2>Charity Sale & Instant Portraits</h2>
                         <p>At our school's charity sale, I helped sell club members' prints and set up an instant photo station, taking portraits students could take home right away.</p>
                         <p>Many later told me those photos helped them hold onto the joy of that day—a reminder that photography isn't just about the image, but about creating memories for others.</p>
                     </div>
@@ -95,9 +97,8 @@
     <footer class="main-footer">
         <p>&copy; 2026. All rights reserved.</p>
         <div class="social-links">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/viennawyn0829/" aria-label="Valery Wang on Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:viennawyn19@icloud.com" aria-label="Email Valery Wang"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 

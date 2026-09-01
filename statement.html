@@ -19,33 +19,35 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="main-header">
         <div class="logo">
             <a href="./index.html">
-                <h1>Valery Wang</h1>
+                <span class="site-name">Valery Wang</span>
             </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-navigation" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="works.html">Selected Works</a></li>
+                <li><a href="documentary.html">Documentary</a></li>
                 <li><a href="community.html">Community</a></li>
-                <li><a href="statement.html" class="active">Artist Statement</a></li>
+                <li><a href="statement.html" class="active" aria-current="page">Artist Statement</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Open menu" aria-controls="main-navigation" aria-expanded="false">
             <span class="hamburger"></span>
         </button>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
         <section class="statement-section">
             <div class="page-header" data-aos="fade-down">
-                <h2 class="page-main-title">Valery Wang</h2>
-                <p class="page-subtitle">Artist Statement</p>
+                <h1 class="page-main-title">Artist Statement</h1>
+                <p class="page-subtitle">Observation, memory, and connection</p>
             </div>
             
             <div class="statement-container" data-aos="fade-up" data-aos-delay="200">
@@ -69,9 +71,8 @@
     <footer class="main-footer">
         <p>&copy; 2026. All rights reserved.</p>
         <div class="social-links">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/viennawyn0829/" aria-label="Valery Wang on Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:viennawyn19@icloud.com" aria-label="Email Valery Wang"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 

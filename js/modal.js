@@ -1,20 +1,20 @@
 const imageMetadata = {
-    './images/Everyday Spaces/2025-10-07 230614.jpg': {
+    './images/Everyday Spaces/2025-10-07 230614-optimized.jpg': {
         index: '#001',
         title: 'Glass room café',
         description: `Light pours in through the big glass window.`
     },
-    './images/Everyday Spaces/2025-10-07 230702.jpg': {
+    './images/Everyday Spaces/2025-10-07 230702-optimized.jpg': {
         index: '#002',
         title: 'Leisure in the courtyard fountain',
         description: `A slow afternoon by the fountain.`
     },
-    './images/Everyday Spaces/2025-10-07 230908.jpg': {
+    './images/Everyday Spaces/2025-10-07 230908-optimized.jpg': {
         index: '#003',
         title: 'The moment of being alone by the river',
         description: `One drink, soft light, happy alone.`
     },
-    './images/Everyday Spaces/2025-10-07 231235.jpg': {
+    './images/Everyday Spaces/2025-10-07 231235-optimized.jpg': {
         index: '#004',
         title: 'Half a day in the street cafe',
         description: `Half a day slips by at the corner café.`
@@ -133,52 +133,74 @@ document.addEventListener('DOMContentLoaded', () => {
     const html = document.documentElement;
     const body = document.body;
 
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+    let lastFocusedElement = null;
+
+    function openModal(item) {
+        const img = item.querySelector('img');
+        const imgSrc = img.getAttribute('src');
+        const metadata = imageMetadata[imgSrc] || {
+            index: '#000',
+            title: 'Untitled',
+            description: getTimeBasedGreeting()
+        };
+
+        lastFocusedElement = item;
+        modalImage.src = imgSrc;
+        modalImage.alt = metadata.title;
+        modalIndex.textContent = metadata.index;
+        modalTitle.textContent = metadata.title;
+        modalMeta.textContent = '';
+        modalDescription.textContent = metadata.description;
+        modal.setAttribute('aria-hidden', 'false');
+        html.classList.add('no-scroll');
+        body.classList.add('no-scroll');
+        modal.classList.add('active');
+
+        window.setTimeout(() => modalClose.focus(), 80);
+    }
 
     galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            const imgSrc = img.getAttribute('src');
-            const metadata = imageMetadata[imgSrc] || {
-                index: '#000',
-                title: 'Untitled',
-                location: 'Unknown',
-                date: 'Unknown',
-                description: getTimeBasedGreeting()
-            };
-
-            modalImage.src = imgSrc;
-            modalImage.alt = metadata.title;
-            modalIndex.textContent = metadata.index;
-            modalTitle.textContent = metadata.title;
-            modalMeta.textContent = '';
-            modalDescription.textContent = metadata.description;
-
-            html.classList.add('no-scroll');
-            body.classList.add('no-scroll');
-
-            setTimeout(() => {
-                modal.classList.add('active');
-            }, 10);
+        const title = item.querySelector('.gallery-title')?.textContent?.trim() || 'View photograph';
+        item.setAttribute('role', 'button');
+        item.setAttribute('tabindex', '0');
+        item.setAttribute('aria-label', `Open photograph: ${title}`);
+        item.addEventListener('click', () => openModal(item));
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openModal(item);
+            }
         });
     });
 
     function closeModal() {
         modal.classList.remove('active');
-        
-        setTimeout(() => {
+        modal.setAttribute('aria-hidden', 'true');
+
+        window.setTimeout(() => {
             html.classList.remove('no-scroll');
             body.classList.remove('no-scroll');
-        }, 800);
+            lastFocusedElement?.focus();
+        }, 350);
     }
 
     modalClose.addEventListener('click', closeModal);
 
     modalBackdrop.addEventListener('click', closeModal);
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
+    document.addEventListener('keydown', (event) => {
+        if (!modal.classList.contains('active')) return;
+
+        if (event.key === 'Escape') {
+            event.preventDefault();
             closeModal();
+            return;
+        }
+
+        if (event.key === 'Tab') {
+            event.preventDefault();
+            modalClose.focus();
         }
     });
 });
